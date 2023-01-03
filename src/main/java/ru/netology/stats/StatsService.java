@@ -1,9 +1,7 @@
 package ru.netology.stats;
 
-public
-class StatsService {
-    public
-    int GetSumOfAllSales(int[] sales) {
+public class StatsService {
+    public int getSumOfAllSales(int[] sales) {
         int SumOfAllSales = 0;
         for (int i = 0; i < sales.length; i++) {
             SumOfAllSales += sales[i];
@@ -12,8 +10,7 @@ class StatsService {
         return SumOfAllSales;
     }
 
-    public
-    int GetAverageSalesPerMonth(int[] sales) {
+    public int getAverageSalesPerMonth(int[] sales) {
         int SumOfAllSales = 0;
         int AverageSalesPerMonth = 0;
         for (int i = 0; i < sales.length; i++) {
@@ -23,8 +20,7 @@ class StatsService {
         return AverageSalesPerMonth;
     }
 
-    public
-    int GetMaxMonth(int[] sales) {
+    public int getMaxMonth(int[] sales) {
         int MaxMonth = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] >= sales[MaxMonth]) {
@@ -34,8 +30,7 @@ class StatsService {
         return MaxMonth + 1;
     }
 
-    public
-    int GetMinMonth(int[] sales) {
+    public int getMinMonth(int[] sales) {
         int MinMonth = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] <= sales[MinMonth]) {
@@ -45,9 +40,8 @@ class StatsService {
         return MinMonth + 1;
     }
 
-    public
-    int GetBelowAverageSales(int[] sales) {
-        int AverageSalesPerMonth = GetAverageSalesPerMonth(sales);
+    public int getBelowAverageSales(int[] sales) {
+        int AverageSalesPerMonth = getAverageSalesPerMonth(sales);
         int MonthBelowAverage = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] < AverageSalesPerMonth) {
@@ -59,9 +53,8 @@ class StatsService {
     }
 
 
-    public
-    int GetAboveAverageMonth(int[] sales) {
-        int AverageSalesPerMonth = GetAverageSalesPerMonth(sales);
+    public int getAboveAverageMonth(int[] sales) {
+        int AverageSalesPerMonth = getAverageSalesPerMonth(sales);
         int MonthBelowAverage = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] > AverageSalesPerMonth) {
